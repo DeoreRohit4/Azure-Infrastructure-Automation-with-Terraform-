@@ -1,0 +1,1 @@
+# Web Linux VM input variables (placeholder)
