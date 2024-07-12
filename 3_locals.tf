@@ -1,4 +1,4 @@
-# Define Local Values
+# Define-Local-Values
 
 locals {
   owners = var.business_division

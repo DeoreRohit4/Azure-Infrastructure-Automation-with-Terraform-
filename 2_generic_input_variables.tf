@@ -1,5 +1,5 @@
 # --- Generic Input Variables ---
-# Business Division
+# Business-Division
 variable "business_division" {
   description = "Business Division is the large organization this Ifrastructure belongs"
   type = string

@@ -6,7 +6,7 @@ resource "azurerm_subnet" "bastionsubnet" {
   address_prefixes     = var.bastion_subnet_address
 }
 
-# Resource-2: Create Network Security Group (NSG)
+# Resource -2: Create Network Security Group (NSG)
 resource "azurerm_network_security_group" "bastion_subnet_nsg" {
   name                = "${azurerm_subnet.bastionsubnet.name}-nsg"
   location            = azurerm_resource_group.rg.location

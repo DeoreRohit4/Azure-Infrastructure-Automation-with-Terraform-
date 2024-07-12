@@ -5,7 +5,7 @@ variable "vnet_name" {
     default = "vnet-default"
 }
 
-# Vnet Address space
+# Vnet Address-space
 variable "vnet_address_space" {
     description = "Virtual Network Address Space"
     type = list(string)
