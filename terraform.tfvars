@@ -1,4 +1,3 @@
-
 business_division = "hr"
 environment = "dev"
 resource_group_name = "rg"
@@ -18,3 +17,7 @@ db_subnet_address = ["10.1.21.0/24"]
 
 bastion_subnet_name = "bastionsubnet"
 bastion_subnet_address = ["10.1.100.0/24"]
+
+# Newly added
+bastion_service_subenet_name = "AzureBastionSubnet"
+bastion_service_address_prefixs = ["10.1.101.0/27"]

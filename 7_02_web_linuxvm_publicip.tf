@@ -1,3 +1,4 @@
+/*
 #Resorce 1: Public-IP
 resource "azurerm_public_ip" "web_linuxvm_publicip" {
   name = "${local.resource_name_prefix}-web_linuxvm_publicip"
@@ -8,3 +9,4 @@ resource "azurerm_public_ip" "web_linuxvm_publicip" {
   domain_name_label = "app1-vm-${random_string.my-random.id}"
   tags = local.comman_tags
 } 
+*/
