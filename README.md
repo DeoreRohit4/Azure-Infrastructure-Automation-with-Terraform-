@@ -28,3 +28,39 @@ Networking Components
 - base64encode: Encodes a string to base64.
 ### Outputs
 - Terraform Outputs for the created Azure resources, including details like resource IDs, public IP addresses, and network configurations.
+
+-----------------------------------------------------------------------------
+
+## Blog 2:https://rohitexplainstech.hashnode.dev/azure-infrastructure-automation-with-terraform-part-2
+
+![image data](<Business (4).png>)
+
+### Azure Resources to be Created
+
+- Terraform Input Variables
+
+- azurerm_public_ip
+
+- azurerm_network_interface
+
+- azurerm_linux_virtual_machine
+
+- Terraform Null Resource null_resource
+
+- Terraform File Provisioner
+
+- Terraform remote-exec Provisioner
+
+- azurerm_bastion_host
+
+- Azure Bastion Service
+
+- Terraform Output Values
+
+![img data](image.png)
+
+![img data](image-1.png)
+
+![img data](image-2.png)
+
+-------------------------------------------------------------------------------
