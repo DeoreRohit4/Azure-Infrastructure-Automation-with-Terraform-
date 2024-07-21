@@ -1,3 +1,4 @@
+/*
 # Azure Bastion Service - Resources
 ## Resource -1 : Azure Bastion Subnet
 
@@ -32,3 +33,4 @@ resource "azurerm_bastion_host" "bastion_host" {
   }
 
 }
+*/

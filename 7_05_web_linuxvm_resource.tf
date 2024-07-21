@@ -2,20 +2,40 @@
 locals {
   webvm_custom_data = <<CUSTOM_DATA
       #!/bin/sh
-      set -e
-      sudo yum update -y
-      sudo yum install -y httpd
-      sudo systemctl enable httpd
-      sudo systemctl start httpd  
-      sudo systemctl stop firewalld
-      sudo systemctl disable firewalld
-      sudo chmod -R 777 /var/www/html 
+      # Update the package list
+      sudo apt-get update -y
+      
+      # Install Apache
+      sudo apt-get install -y apache2
+      
+      # Enable and start Apache service
+      sudo systemctl enable apache2
+      sudo systemctl start apache2
+      
+      # Stop and disable the firewall
+      sudo ufw disable
+      
+      # Set permissions for the web root
+      sudo chmod -R 777 /var/www/html
+      
+      # Create the index.html file with a welcome message
       echo "Welcome to stacksimplify - WebVM App1 - VM Hostname: $(hostname)" | sudo tee /var/www/html/index.html
-      sudo mkdir -p /var/www/html/app1
+      
+      # Create app1 directory
+      sudo mkdir /var/www/html/app1
+      
+      # Create hostname.html in app1 directory
       echo "Welcome to stacksimplify - WebVM App1 - VM Hostname: $(hostname)" | sudo tee /var/www/html/app1/hostname.html
+      
+      # Create status.html in app1 directory
       echo "Welcome to stacksimplify - WebVM App1 - App Status Page" | sudo tee /var/www/html/app1/status.html
-      echo '<!DOCTYPE html><html><body style="background-color:rgb(250, 210, 210);"><h1>Welcome to Stack Simplify - WebVM APP-1</h1><p>Terraform Demo</p><p>Application Version: V1</p></body></html>' | sudo tee /var/www/html/app1/index.html
+      
+      # Create a custom index.html in app1 directory
+      echo '<!DOCTYPE html> <html> <body style="background-color:rgb(250, 210, 210);"> <h1>Welcome to Stack Simplify - WebVM APP-1 </h1> <p>Terraform Demo</p> <p>Application Version: V1</p> </body></html>' | sudo tee /var/www/html/app1/index.html
+      
+      # Fetch metadata and save it to metadata.html in app1 directory
       sudo curl -H "Metadata:true" --noproxy "*" "http://169.254.169.254/metadata/instance?api-version=2020-09-01" -o /var/www/html/app1/metadata.html
+      
   CUSTOM_DATA
 }
 
@@ -41,11 +61,11 @@ resource "azurerm_linux_virtual_machine" "web_linuxvm" {
   }
 
   source_image_reference {
-    publisher = "RedHat"
-    offer = "RHEL"
-    sku = "83-gen2"
-    version = "latest"
-  }
+    publisher = "Canonical"
+    offer     = "0001-com-ubuntu-server-jammy"
+    sku       = "22_04-lts-gen2"
+    version   = "latest"
+ }
 
   custom_data = base64encode(local.webvm_custom_data)
 }
