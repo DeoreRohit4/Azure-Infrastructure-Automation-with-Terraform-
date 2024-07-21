@@ -31,7 +31,7 @@ Networking Components
 
 -----------------------------------------------------------------------------
 
-## Blog 2:https://rohitexplainstech.hashnode.dev/azure-infrastructure-automation-with-terraform-part-2
+## Blog 2: https://rohitexplainstech.hashnode.dev/azure-infrastructure-automation-with-terraform-part-2
 
 ![image data](<Business (4).png>)
 
@@ -64,3 +64,7 @@ Networking Components
 ![img data](image-2.png)
 
 -------------------------------------------------------------------------------
+
+## Blog 3: https://rohitexplainstech.hashnode.dev/azure-infrastructure-automation-with-terraform-part-3
+
+![alt text](<Business (5).png>)
