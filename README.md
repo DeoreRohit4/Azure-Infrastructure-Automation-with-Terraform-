@@ -67,4 +67,30 @@ Networking Components
 
 ## Blog 3: https://rohitexplainstech.hashnode.dev/azure-infrastructure-automation-with-terraform-part-3
 
-![alt text](</manifests/img/Business%20(5).png>)
+![img data](<Business (5).png>)
+
+### Azure Standard Load Balancer Resources
+
+1. azurerm_public_ip
+
+2. azurerm_lb
+
+3. azurerm_lb_backend_address_pool
+
+4. azurerm_lb_probe
+
+5. azurerm_lb_rule
+
+6. azurerm_network_interface_backend_address_pool_association
+
+7. Comment Azure Bastion Service as we are already using Azure Bastion Host approach with Linux VM
+
+![alt text](image-3.png)
+
+![alt text](image-4.png)
+
+![alt text](image-5.png)
+
+![alt text](image-6.png)
+
+-------------------------------------------------------------------------------------------
