@@ -94,3 +94,21 @@ Networking Components
 ![alt text](image-6.png)
 
 -------------------------------------------------------------------------------------------
+
+## Blog 4: https://rohitexplainstech.hashnode.dev/azure-infrastructure-automation-with-terraform-part-4
+
+![img data](<Business (6).png>)
+
+### Inbound NAT Rule for Standard Load Balancer
+
+1. azurerm_lb_nat_rule
+
+2. azurerm_network_interface_nat_rule_association
+
+3. Verify the SSH Connectivity to Web Linux VM using Load Balancer Public IP with port 1022
+
+![alt text](image-7.png)
+
+![alt text](image-8.png)
+
+![alt text](image-9.png)
